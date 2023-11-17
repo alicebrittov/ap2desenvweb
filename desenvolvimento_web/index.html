@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atletas Botafogo</title> 
+</head>
+<body>
+    <div id ="botafogo"> 
+        <h1>Atletas Botafogo em 2023-2 </h1>
+        <p>Criado com objetivos exclusivamente didáticos para a disciplina Desenvolvimento Web do Ibmec Rio. </p>
+        <img src="Escudo_Botafogo.png" alt="escudo">
+    </div>
+    <div id = "caixa"> 
+        <input id="entrada" placeholder="Informe a senha" type="text" >
+        <button id="botao" > Entrar </button>
+        <p> Efetue login com a senha: SENHA</p>
+    </div>
+    <script>
+        document.getElementById('botao').addEventListener('click', function() {
+            var senhaInserida = document.getElementById('entrada').value;
+    
+            if (senhaInserida === 'SENHA') {
+                window.location.href = 'index2.html';
+            } else {
+                alert('Senha incorreta. Tente novamente.');
+            }
+        });
+    </script>
+
+    
+</body>
+</html>
