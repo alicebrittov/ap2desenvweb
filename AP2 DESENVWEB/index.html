@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atletas Botafogo</title> 
+</head>
+<body>
+    <div id ="botafogo"> 
+        <h1>Atletas Botafogo em 2023-2 </h1>
+        <p>Criado com objetivos exclusivamente didáticos para a disciplina Desenvolvimento Web do Ibmec Rio. </p>
+        <img src="Escudo_Botafogo.png" alt="escudo">
+    </div>
+    <div id = "caixa"> 
+        <input id="entrada" placeholder="Informe a senha" type="text" >
+        <button id="botao" >Entrar</button>
+        <p> Efetue login com a senha: SENHA</p>
+    </div>
+    <script src="jshash-2.2/md5.js"></script>
+    
+    <script>
+
+        // Função para verificar a senha e redirecionar
+        document.getElementById('botao').addEventListener('click', function() {
+            // Obtenha o valor inserido pelo usuário no campo de senha
+            var senhaInserida = document.getElementById('entrada').value;
+            // Calcule o hash MD5 da senha inserida
+            var senhaInseridaHash = hex_md5(senhaInserida);
+
+            // Substitua 'HASH_MD5_CORRETO' pelo hash MD5 correto da senha
+            var senhaCorretaHash = '85ee0fe4f155a9af2657d85054ad63ca';
+
+            // Compare os hashes MD5
+            if (senhaInseridaHash === senhaCorretaHash) {
+                // Redirecione o usuário para a próxima página
+                window.location.href = 'index2.html';
+            } else {
+                // Senha incorreta - você pode exibir uma mensagem de erro se desejar
+                alert('Senha incorreta. Tente novamente.');
+            }
+            });
+    </script>
+
+    
+</body>
+</html>

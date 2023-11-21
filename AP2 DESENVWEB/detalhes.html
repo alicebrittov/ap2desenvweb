@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Atleta</title>
+    <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+    <div class="detalhes-page">
+        <div id = "detalhes1">
+        <h1>Detalhes do Atleta</h1>
+        <img id="detalhes-imagem" alt="Imagem do Atleta">
+        <h2 id="detalhes-nome"></h2>
+        </div>
+        <div id = "detalhes2">
+        <p id="detalhes-descricao"></p>
+        <p>Data de Nascimento: <span id="detalhes-nascimento"></span></p>
+        <p>Altura: <span id="detalhes-altura"></span></p>
+        </div>
+        <div id= "voltar">
+        <a href="javascript:history.back()">Voltar</a>
+        </div>
+    </div>
+
+    <script>
+        // Extrair parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        const nome = decodeURIComponent(urlParams.get('nome'));
+        const nascimento = decodeURIComponent(urlParams.get('nascimento'));
+        const altura = decodeURIComponent(urlParams.get('altura'));
+        const imagem = decodeURIComponent(urlParams.get('imagem'));
+        const descricao = decodeURIComponent(urlParams.get('descricao'));
+
+        // Preencher elementos HTML com os dados do atleta
+        document.getElementById('detalhes-imagem').src = imagem;
+        document.getElementById('detalhes-nome').innerText = nome;
+        document.getElementById('detalhes-descricao').innerText = descricao;
+        document.getElementById('detalhes-nascimento').innerText = nascimento;
+        document.getElementById('detalhes-altura').innerText = altura;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5em;
+}
+
+
+header{
+    background-color: rgb(225, 216, 245);
+    padding: 0.5em 1em;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 2000px;
+    align-items: center;
+}
+
+
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+#btn-sair{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    margin-left: 30px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 70px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-left: 1450px;
+}
+
+#btn-sair:hover {
+    background-color: #800456;;
+}
+
+
+article{
+    width: min-content;
+    margin: auto;
+    background-color: rgb(40, 6, 50);
+    padding: 0.5em;
+    cursor: pointer;
+    text-align: center;
+}
+
+#container-jogadores{
+    display: grid;
+    gap: 1em;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.saibamais{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5em; 
+    position: relative;
+    background-color: rgb(66, 57, 64)
+}
+
+/* Estilos para o container de atletas da página principal */
+.atletas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Uma coluna até 768px */
+@media only screen and (max-width: 768px) {
+    .atletas-container {
+        flex-direction: column;
+    }
+}
+
+/* Duas colunas até 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .atletas-container {
+        flex-direction: row;
+    }
+
+    .atleta {
+        width: 48%; /* Ajuste conforme necessário */
+    }
+}
+
+/* Quatro colunas depois de 1024px */
+@media only screen and (min-width: 1025px) {
+    .atleta {
+        width: 23%; /* Ajuste conforme necessário */
+    }
+}
+
+/* Largura máxima da lista de 1200px */
+@media only screen and (min-width: 1200px) {
+    .atletas-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
