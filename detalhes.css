@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(40, 6, 50);
+    color: white;
+    margin: 2em;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-direction: row;
+}
+
+
+h1{
+    margin: auto;
+    width: min-content;
+    color: white;
+    position: relative;
+    top: 347.5px;
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 2em;
+    display: block;
+    text-align: center;
+}
+
+#detalhes1{
+    width: 500px;
+    height: 100px;
+}
+
+#detalhes-nome{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#detalhes-posicao{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#detalhes2{
+    margin-left: 300px;
+}
+
+#detalhes-descricao{
+    font-size: large;
+}
+
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+#voltar{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 70px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: #f2f2f2;
+    }
+
+    .pagina-login,
+    .pagina-detalhes {
+        width: 100%;
+    }
+}
